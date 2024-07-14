@@ -1,11 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-    </head>
-    <body>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator BMI</title>
+    <!-- Style -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Kalkulator BMI</h1>
+    </header>
+    <main>
+        <!-- Article -->
+        <article>
+            <p>Berat badan ideal adalah impian semua orang. Tidak hanya memiliki bentuk tubuh yang menunjang penampilan, berat badan ideal juga menandakan kondisi tubuh yang sehat. Gimana dengan kamu? Ayo, hitung sekarang di kalkulator BMI.</p>
+        </article>
+        <!-- Section -->
+        <section>
+            <form id="bmiForm">
+                <label for="gender">Jenis Kelamin</label>
+                <div class="radio-group">
+                    <input type="radio" id="male" name="gender" class="gender-button">
+                    <label for="male">Pria</label>
+                </div>
+                <div class="radio-group">
+                    <input type="radio" id="female" name="gender" class="gender-button">
+                    <label for="female">Wanita</label>
+                </div>
+                <label for="weight">Berat Badan (kg)</label>
+                <input type="number" id="weight" name="weight">
+                <label for="age">Usia (tahun)</label>
+                <input type="number" id="age" name="age">
+                <label for="height">Tinggi badan (cm)</label>
+                <input type="number" id="height" name="height">
+                <button type="button" onclick="calculateBMI()" id="calculate">Submit</button>
+                <button type="button" onclick="resetForm()" id="reset">Reset</button>
+            </form>
+        </section>
+    </main>
+    
+    <!-- Result -->
+    <section id="result" class="result">
+        <!-- Result Article -->
+        <article>
+            <header>
+                <h1>Hasil</h1>
+            </header>
+
+            <!-- Result Section -->
+            <section>
+                <h2 id="resultHeader"></h2>
+                <p id="bmiValue" class="bmi-value"></p>
+                <p id="bmiMessage" class="bmi-message"></p>
+                <p id="bmiRange" class="bmi-range"></p>
+            </section>
         
-    </body>
+            <!-- Note Article -->
+            <article>
+                <p id="bmiNote" class="bmi-note"></p>
+            </article>
+        </article>
+    </section>
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
 </html>
